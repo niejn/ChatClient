@@ -1,0 +1,22 @@
+﻿
+On the main menu, the user is allowed to create a new account, login, or exit the program. Creating a new account requires a user’s login id, password, and phone number. After an account is registered, the user can login using the id and password. 
+
+The user menu allows users to add/delete from the contact list or block list, and to output these lists. The add/delete functions will test if the specified user already exists on the list or doesn’t exist yet. 
+
+The user is also allowed to view a list of notifications which contain unread messages, once a message is selected, it will be marked as read and be deleted from the notification list. 
+
+In the view chats/start new chat menu, the user can start a new chat by entering a list of members. When a list of chats is outputted, the user can enter the chat id that he wants to access. 
+
+In the chat menu, a list of 10 most recent messages is output.  The user can create a new message within the chat, edit/delete any messages he originally sent, add/delete member, or delete the entire chat if he is the original creator. The user can also load earlier messages by selecting that option.
+
+The last option on the user menu is to delete one’s account, if the user is the owner of any chats, a message will be output and the delete operation will be stopped. 
+
+The program utilizes ResultSet data very extensively to reduce the length of queries and the amount of queries needed.
+
+No indices/triggers are used.
+
+In Create_table.sql, some foreign keys have been modified with on delete cascade. This is to assure that related data will be properly handled when an element gets deleted. Please see the file for more details.
+
+Jason worked on the queries regarding users, contact list/block list. Eric worked on the queries regarding messages. The queries on chats is a group effort.
+
+Features we could not implement include: Listing chats by last update time, displaying attachment type and URL, self-destruction timestamps.
